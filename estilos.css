@@ -1,0 +1,212 @@
+:root{
+    --Titulos:'Arima Madurai', cursive;
+    --parrafos:'Mulish', sans-serif;
+
+}
+/* Paleta: Rojo (#E10600), Amarillo (#FFD700), Negro (#000), Grises (#222, #f5f5f5, #e0e0e0) */
+body {
+    font-family: var(--Titulos), sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+/* ======= ENCABEZADO ======= */
+.encabezado {
+    background-color: #E10600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 60px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* ======= NAVEGACIÓN ======= */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FFD700;
+}
+
+/* Botón hamburguesa (solo móvil) */
+.hamburguesa {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ======= SECCIONES ======= */
+.inicio, .informacion, .contacto, .redes {
+    padding: 50px 15%;
+    text-align: center;
+}
+
+/* ======= INFORMACIÓN ======= */
+.informacion {
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+.informacion ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.informacion li {
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 18px;
+    border-left: 6px solid #E10600;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, border-left-color 0.3s;
+}
+
+.informacion li:hover {
+    transform: translateY(-4px);
+    border-left-color: #FFD700;
+}
+
+/* ======= CONTACTO ======= */
+.contacto {
+    background-color: #E10600;
+    color: white;
+}
+
+.telefono {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* ======= REDES ======= */
+.redes {
+    background-color: #f5f5f5;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.iconos-redes a {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos-redes img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.iconos-redes a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+/* ======= PIE DE PÁGINA ======= */
+.pie {
+    background-color: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* ======= RESPONSIVIDAD ======= */
+@media (max-width: 900px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: #E10600;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .menu.mostrar ul {
+        display: flex;
+    }
+
+    .hamburguesa {
+        display: block;
+    }
+
+    .encabezado {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .inicio, .informacion, .contacto, .redes {
+        padding: 40px 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        height: 45px;
+    }
+
+    .informacion li {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+
+    .iconos-redes a {
+        width: 60px;
+        height: 60px;
+    }
+
+    .iconos-redes img {
+        width: 35px;
+        height: 35px;
+    }
+}
