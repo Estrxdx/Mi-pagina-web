@@ -1,5 +1,5 @@
 :root{
-    --Titulos:'Arima Madurai';
+    --Titulos:'Arima', cursive;
     --parrafos:'Mulish', sans-serif;
 
 }
@@ -210,4 +210,5 @@ h1 {
         height: 35px;
     }
 }
+
 
