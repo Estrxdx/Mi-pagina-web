@@ -1,5 +1,5 @@
 :root{
-    --Titulos:'Arima', cursive;
+    --Titulos:'Arima';
     --parrafos:'Mulish', sans-serif;
 
 }
@@ -210,5 +210,6 @@ h1 {
         height: 35px;
     }
 }
+
 
 
